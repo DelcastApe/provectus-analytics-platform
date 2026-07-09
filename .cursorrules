@@ -1,13 +1,13 @@
 # Provectus AI Engineering Internship - Analytics Platform
-Este proyecto procesa telemetría de Claude Code.
+This project processes Claude Code telemetry data.
 
-## Reglas de desarrollo:
-1. El análisis debe basarse en la base de datos `data/telemetry.db` (SQLite).
-2. Todo nuevo componente de visualización debe usar Streamlit y seguir la estructura de `src/dashboard.py`.
-3. El código debe ser limpio, con manejo de errores y conversión explícita de tipos (especialmente para `cost_usd`).
-4. La arquitectura está desacoplada: `src/ingest.py` procesa datos, `src/dashboard.py` visualiza.
-5. `src/ingest.py` debe leer `data/telemetry_logs.jsonl`, combinarlo con `data/employees.csv` y guardar el resultado en `data/telemetry.db`.
+## Development Rules:
+1. All analysis must be based on the `data/telemetry.db` (SQLite) database.
+2. Any new visualization component must use Streamlit and follow the structure of `src/dashboard.py`.
+3. The code must be clean, with error handling and explicit type casting (especially for `cost_usd`).
+4. The architecture is decoupled: `src/ingest.py` processes data, `src/dashboard.py` handles visualization.
+5. `src/ingest.py` must read `data/telemetry_logs.jsonl`, merge it with `data/employees.csv`, and save the result into `data/telemetry.db`.
 
-## Habilidades Customizadas (Custom Skills):
-- Usa el script `src/ingest.py` para recargar datos si el dataset cambia.
-- Siempre valida que las columnas numéricas sean tratadas como float antes de operar.
+## Custom Skills:
+- Use the `src/ingest.py` script to reload data if the dataset changes.
+- Always validate that numerical columns are treated as floats before performing operations.
