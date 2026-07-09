@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  analytics-platform:
+    build: .
+    container_name: claude_analytics
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data

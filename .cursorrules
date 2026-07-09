@@ -1,0 +1,13 @@
+# Provectus AI Engineering Internship - Analytics Platform
+Este proyecto procesa telemetría de Claude Code.
+
+## Reglas de desarrollo:
+1. El análisis debe basarse en la base de datos `data/telemetry.db` (SQLite).
+2. Todo nuevo componente de visualización debe usar Streamlit y seguir la estructura de `src/dashboard.py`.
+3. El código debe ser limpio, con manejo de errores y conversión explícita de tipos (especialmente para `cost_usd`).
+4. La arquitectura está desacoplada: `src/ingest.py` procesa datos, `src/dashboard.py` visualiza.
+5. `src/ingest.py` debe leer `data/telemetry_logs.jsonl`, combinarlo con `data/employees.csv` y guardar el resultado en `data/telemetry.db`.
+
+## Habilidades Customizadas (Custom Skills):
+- Usa el script `src/ingest.py` para recargar datos si el dataset cambia.
+- Siempre valida que las columnas numéricas sean tratadas como float antes de operar.
