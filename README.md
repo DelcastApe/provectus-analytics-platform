@@ -1,4 +1,3 @@
-```markdown
 # Claude Code Usage Analytics Platform
 
 An end-to-end data engineering and analytics platform designed to process Claude Code telemetry data, extract insights, and present actionable metrics through an interactive dashboard[cite: 2].
@@ -20,10 +19,7 @@ The entire application is containerized to ensure full reproducibility across an
 2. Run the following command to build and start the platform:
    ```bash
    docker compose up --build
-
-```
-
-3. Open your web browser and navigate to: **http://localhost:8501**
+3. Open your web browser and navigate to: http://localhost:8501
 
 *Note: The Docker container will automatically execute the data ingestion script first, generate the SQLite database locally, and then spin up the Streamlit dashboard.*
 
@@ -63,7 +59,3 @@ As per the assignment requirements, AI-assisted development was utilized to acce
 
 
 * `requirements.txt`: Python dependencies for alternative local execution.
-
-```
-
-```
